@@ -1,0 +1,22 @@
+<div class="p-3 mb-2 bg-info text-white">
+{% extends 'toodo/base.html' %}
+
+{% block content %}
+
+
+<h1>Login Page</h1>
+
+<h2>{{ error }}</h2>
+
+
+<form method="POST">
+{% csrf_token %}
+{{ form.as_p }}
+<button type="submit">Login</button>
+</form>
+
+
+
+
+{% endblock %}
+</div>

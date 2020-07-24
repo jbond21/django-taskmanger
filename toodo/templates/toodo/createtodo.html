@@ -1,0 +1,33 @@
+
+{% extends 'toodo/base.html' %}
+
+{% block content %}
+
+
+<h1>Create Task</h1>
+
+<h2>{{ error }}</h2>
+
+
+
+<form method="POST">
+{% csrf_token %}
+<div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" class="form-control" id="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="memo">Memo</label>
+                    <textarea name="task" class="form-control" id="task" ></textarea>
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" name="important" class="form-check-input" id="important">
+                    <label class="form-check-label" for="important">Important</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+
+
+
+{% endblock %}

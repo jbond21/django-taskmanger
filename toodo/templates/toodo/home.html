@@ -1,0 +1,17 @@
+{% extends 'toodo/base.html' %}
+
+{% block content %}
+
+<div class="jumbotron">
+  <h1 class="display-4">Forgetful Man Task Organizer</h1>
+  <p class="lead">Ever forget to do a something before? Wife/Mom/Girlfriend staring at you as you try to remember? This is the site for You! </p>
+  <hr class="my-4">
+  <p>Sign up Today and Never forget Again!</p>
+  <a class="btn btn-primary btn-lg" href="{% url 'signupuser' %}" role="button">SignUp</a>
+  <a class="btn btn-primary btn-lg" href="{% url 'loginuser' %}" role="button">Login</a>
+</div>
+
+
+
+
+{% endblock %}

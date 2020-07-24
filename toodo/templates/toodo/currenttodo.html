@@ -1,0 +1,19 @@
+{% extends 'toodo/base.html' %}
+
+{% block content %}
+
+<h1>Current Task</h1>
+
+<div class="list-group">
+  {% for todo in todos %}
+  <a href="{% url 'viewtodo' todo.id  %}" class="list-group-item list-group-item-action list-group-item-primary">
+    {% if todo.important %}<b>{% endif %}{{ todo.title }}{% if todo.important %}</b>{% endif %}
+    {% if todo.task %} - {{ todo.task }}{% endif %}
+  </a>
+  {% endfor %}
+</div>
+
+
+
+
+{% endblock %}
